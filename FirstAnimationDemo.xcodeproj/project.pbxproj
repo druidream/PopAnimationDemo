@@ -20,25 +20,15 @@
 		6A09BEDE1C1F2702009C415C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A09BEDD1C1F2702009C415C /* Foundation.framework */; };
 		6A09BEE01C1F27A9009C415C /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A09BEDF1C1F27A9009C415C /* OpenGLES.framework */; };
 		6A09BEE21C1FED02009C415C /* sample.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6A09BEE11C1FED02009C415C /* sample.jpg */; };
-		6A0CDB151C229549006FC06F /* TestProgessViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A0CDB131C229549006FC06F /* TestProgessViewViewController.m */; };
-		6A0CDB161C229549006FC06F /* TestProgessViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A0CDB141C229549006FC06F /* TestProgessViewViewController.xib */; };
 		6A0CDB261C257555006FC06F /* Silent Roar-euphoria.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6A0CDB251C257555006FC06F /* Silent Roar-euphoria.mp3 */; };
-		6A0CDB2C1C257C3C006FC06F /* TestWaveformViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A0CDB2A1C257C3C006FC06F /* TestWaveformViewController.m */; };
-		6A0CDB2D1C257C3C006FC06F /* TestWaveformViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A0CDB2B1C257C3C006FC06F /* TestWaveformViewController.xib */; };
 		6A17EE931C27264A00254B8B /* SongTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A17EE911C27264A00254B8B /* SongTableViewController.m */; };
 		6A17EE941C27264A00254B8B /* SongTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A17EE921C27264A00254B8B /* SongTableViewController.xib */; };
 		6A17EE971C27C7A700254B8B /* BackgroundPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A17EE961C27C7A700254B8B /* BackgroundPlayer.m */; };
 		6A17EE9D1C293A0700254B8B /* SimpleCircularProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A17EE9C1C293A0700254B8B /* SimpleCircularProgressView.m */; };
-		6A17EED81C2A07F200254B8B /* TestBoundsAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A17EED71C2A07F200254B8B /* TestBoundsAnimationViewController.m */; };
 		6A17EEDB1C2A925600254B8B /* SimpleWaveHistogramView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A17EEDA1C2A925600254B8B /* SimpleWaveHistogramView.m */; };
-		6A1802F81C2089FE00E6E39D /* TestRotationYViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A1802F61C2089FE00E6E39D /* TestRotationYViewController.m */; };
-		6A1802F91C2089FE00E6E39D /* TestRotationYViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A1802F71C2089FE00E6E39D /* TestRotationYViewController.xib */; };
-		6A1803001C21669B00E6E39D /* TestGPUImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A1802FE1C21669B00E6E39D /* TestGPUImageViewController.m */; };
-		6A1803011C21669B00E6E39D /* TestGPUImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A1802FF1C21669B00E6E39D /* TestGPUImageViewController.xib */; };
 		6A541B441C18C9E5007BD2E3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A541B431C18C9E5007BD2E3 /* main.m */; };
 		6A541B471C18C9E5007BD2E3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A541B461C18C9E5007BD2E3 /* AppDelegate.m */; };
 		6A541B4F1C18C9E5007BD2E3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A541B4E1C18C9E5007BD2E3 /* Images.xcassets */; };
-		6A541B5E1C18C9E5007BD2E3 /* FirstAnimationDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A541B5D1C18C9E5007BD2E3 /* FirstAnimationDemoTests.m */; };
 		6A541B6E1C1A0E1F007BD2E3 /* SongTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A541B6C1C1A0E1F007BD2E3 /* SongTableViewCell.m */; };
 		6A541B6F1C1A0E1F007BD2E3 /* SongTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A541B6D1C1A0E1F007BD2E3 /* SongTableViewCell.xib */; };
 		DC2A1524290F3C32EACD874E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3406B6A20D2B49D4EC6BA46B /* libPods.a */; };
@@ -73,14 +63,7 @@
 		6A09BEDD1C1F2702009C415C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6A09BEDF1C1F27A9009C415C /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		6A09BEE11C1FED02009C415C /* sample.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = sample.jpg; path = ../../../Desktop/sample.jpg; sourceTree = "<group>"; };
-		6A0CDB121C229549006FC06F /* TestProgessViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestProgessViewViewController.h; sourceTree = "<group>"; };
-		6A0CDB131C229549006FC06F /* TestProgessViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestProgessViewViewController.m; sourceTree = "<group>"; };
-		6A0CDB141C229549006FC06F /* TestProgessViewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestProgessViewViewController.xib; sourceTree = "<group>"; };
-		6A0CDB241C2572FD006FC06F /* sample.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = sample.m4a; sourceTree = "<group>"; };
 		6A0CDB251C257555006FC06F /* Silent Roar-euphoria.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Silent Roar-euphoria.mp3"; sourceTree = "<group>"; };
-		6A0CDB291C257C3C006FC06F /* TestWaveformViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestWaveformViewController.h; sourceTree = "<group>"; };
-		6A0CDB2A1C257C3C006FC06F /* TestWaveformViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestWaveformViewController.m; sourceTree = "<group>"; };
-		6A0CDB2B1C257C3C006FC06F /* TestWaveformViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestWaveformViewController.xib; sourceTree = "<group>"; };
 		6A17EE901C27264A00254B8B /* SongTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongTableViewController.h; sourceTree = "<group>"; };
 		6A17EE911C27264A00254B8B /* SongTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongTableViewController.m; sourceTree = "<group>"; };
 		6A17EE921C27264A00254B8B /* SongTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SongTableViewController.xib; sourceTree = "<group>"; };
@@ -88,16 +71,8 @@
 		6A17EE961C27C7A700254B8B /* BackgroundPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundPlayer.m; sourceTree = "<group>"; };
 		6A17EE9B1C293A0700254B8B /* SimpleCircularProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleCircularProgressView.h; sourceTree = "<group>"; };
 		6A17EE9C1C293A0700254B8B /* SimpleCircularProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleCircularProgressView.m; sourceTree = "<group>"; };
-		6A17EED61C2A07F200254B8B /* TestBoundsAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestBoundsAnimationViewController.h; sourceTree = "<group>"; };
-		6A17EED71C2A07F200254B8B /* TestBoundsAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestBoundsAnimationViewController.m; sourceTree = "<group>"; };
 		6A17EED91C2A925600254B8B /* SimpleWaveHistogramView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleWaveHistogramView.h; sourceTree = "<group>"; };
 		6A17EEDA1C2A925600254B8B /* SimpleWaveHistogramView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleWaveHistogramView.m; sourceTree = "<group>"; };
-		6A1802F51C2089FE00E6E39D /* TestRotationYViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestRotationYViewController.h; sourceTree = "<group>"; };
-		6A1802F61C2089FE00E6E39D /* TestRotationYViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestRotationYViewController.m; sourceTree = "<group>"; };
-		6A1802F71C2089FE00E6E39D /* TestRotationYViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestRotationYViewController.xib; sourceTree = "<group>"; };
-		6A1802FD1C21669B00E6E39D /* TestGPUImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestGPUImageViewController.h; sourceTree = "<group>"; };
-		6A1802FE1C21669B00E6E39D /* TestGPUImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestGPUImageViewController.m; sourceTree = "<group>"; };
-		6A1802FF1C21669B00E6E39D /* TestGPUImageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestGPUImageViewController.xib; sourceTree = "<group>"; };
 		6A541B3E1C18C9E5007BD2E3 /* FirstAnimationDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstAnimationDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A541B421C18C9E5007BD2E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6A541B431C18C9E5007BD2E3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -105,8 +80,6 @@
 		6A541B461C18C9E5007BD2E3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		6A541B4E1C18C9E5007BD2E3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6A541B571C18C9E5007BD2E3 /* FirstAnimationDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FirstAnimationDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6A541B5C1C18C9E5007BD2E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6A541B5D1C18C9E5007BD2E3 /* FirstAnimationDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstAnimationDemoTests.m; sourceTree = "<group>"; };
 		6A541B6B1C1A0E1F007BD2E3 /* SongTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongTableViewCell.h; sourceTree = "<group>"; };
 		6A541B6C1C1A0E1F007BD2E3 /* SongTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongTableViewCell.m; sourceTree = "<group>"; };
 		6A541B6D1C1A0E1F007BD2E3 /* SongTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SongTableViewCell.xib; sourceTree = "<group>"; };
@@ -142,7 +115,6 @@
 			isa = PBXGroup;
 			children = (
 				6A541B401C18C9E5007BD2E3 /* FirstAnimationDemo */,
-				6A541B5A1C18C9E5007BD2E3 /* FirstAnimationDemoTests */,
 				6A541B3F1C18C9E5007BD2E3 /* Products */,
 				E73928D558EA2078D98875E9 /* Pods */,
 				DFE6EB8AF73249D7AA29A524 /* Frameworks */,
@@ -188,20 +160,6 @@
 				6A09BEBF1C1D43C1009C415C /* LaunchScreen.xib */,
 				6A09BEC21C1D43CC009C415C /* Main.storyboard */,
 				6A541B411C18C9E5007BD2E3 /* Supporting Files */,
-				6A1802F51C2089FE00E6E39D /* TestRotationYViewController.h */,
-				6A1802F61C2089FE00E6E39D /* TestRotationYViewController.m */,
-				6A1802F71C2089FE00E6E39D /* TestRotationYViewController.xib */,
-				6A1802FD1C21669B00E6E39D /* TestGPUImageViewController.h */,
-				6A1802FE1C21669B00E6E39D /* TestGPUImageViewController.m */,
-				6A1802FF1C21669B00E6E39D /* TestGPUImageViewController.xib */,
-				6A0CDB121C229549006FC06F /* TestProgessViewViewController.h */,
-				6A0CDB131C229549006FC06F /* TestProgessViewViewController.m */,
-				6A0CDB141C229549006FC06F /* TestProgessViewViewController.xib */,
-				6A0CDB291C257C3C006FC06F /* TestWaveformViewController.h */,
-				6A0CDB2A1C257C3C006FC06F /* TestWaveformViewController.m */,
-				6A0CDB2B1C257C3C006FC06F /* TestWaveformViewController.xib */,
-				6A17EED61C2A07F200254B8B /* TestBoundsAnimationViewController.h */,
-				6A17EED71C2A07F200254B8B /* TestBoundsAnimationViewController.m */,
 			);
 			path = FirstAnimationDemo;
 			sourceTree = "<group>";
@@ -211,26 +169,8 @@
 			children = (
 				6A09BEE11C1FED02009C415C /* sample.jpg */,
 				6A0CDB251C257555006FC06F /* Silent Roar-euphoria.mp3 */,
-				6A0CDB241C2572FD006FC06F /* sample.m4a */,
 				6A541B421C18C9E5007BD2E3 /* Info.plist */,
 				6A541B431C18C9E5007BD2E3 /* main.m */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		6A541B5A1C18C9E5007BD2E3 /* FirstAnimationDemoTests */ = {
-			isa = PBXGroup;
-			children = (
-				6A541B5D1C18C9E5007BD2E3 /* FirstAnimationDemoTests.m */,
-				6A541B5B1C18C9E5007BD2E3 /* Supporting Files */,
-			);
-			path = FirstAnimationDemoTests;
-			sourceTree = "<group>";
-		};
-		6A541B5B1C18C9E5007BD2E3 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				6A541B5C1C18C9E5007BD2E3 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -340,16 +280,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6A0CDB2D1C257C3C006FC06F /* TestWaveformViewController.xib in Resources */,
 				6A541B6F1C1A0E1F007BD2E3 /* SongTableViewCell.xib in Resources */,
-				6A0CDB161C229549006FC06F /* TestProgessViewViewController.xib in Resources */,
 				6A09BEE21C1FED02009C415C /* sample.jpg in Resources */,
 				6A09BEC11C1D43C1009C415C /* LaunchScreen.xib in Resources */,
 				6A09BED41C1E8909009C415C /* PlayingViewController.xib in Resources */,
-				6A1802F91C2089FE00E6E39D /* TestRotationYViewController.xib in Resources */,
 				6A17EE941C27264A00254B8B /* SongTableViewController.xib in Resources */,
 				6A0CDB261C257555006FC06F /* Silent Roar-euphoria.mp3 in Resources */,
-				6A1803011C21669B00E6E39D /* TestGPUImageViewController.xib in Resources */,
 				6A541B4F1C18C9E5007BD2E3 /* Images.xcassets in Resources */,
 				6A09BEC41C1D43CC009C415C /* Main.storyboard in Resources */,
 			);
@@ -419,20 +355,15 @@
 			files = (
 				6A17EE931C27264A00254B8B /* SongTableViewController.m in Sources */,
 				6A541B6E1C1A0E1F007BD2E3 /* SongTableViewCell.m in Sources */,
-				6A0CDB2C1C257C3C006FC06F /* TestWaveformViewController.m in Sources */,
 				6A17EE9D1C293A0700254B8B /* SimpleCircularProgressView.m in Sources */,
 				6A17EEDB1C2A925600254B8B /* SimpleWaveHistogramView.m in Sources */,
 				6A09BECF1C1DEFA7009C415C /* SongItem.m in Sources */,
-				6A0CDB151C229549006FC06F /* TestProgessViewViewController.m in Sources */,
 				6A09BEC91C1DD4C9009C415C /* SongTableViewHeader.m in Sources */,
-				6A17EED81C2A07F200254B8B /* TestBoundsAnimationViewController.m in Sources */,
 				6A541B471C18C9E5007BD2E3 /* AppDelegate.m in Sources */,
 				6A09BED31C1E8909009C415C /* PlayingViewController.m in Sources */,
 				6A09BECC1C1DEEAE009C415C /* SongStore.m in Sources */,
-				6A1803001C21669B00E6E39D /* TestGPUImageViewController.m in Sources */,
 				6A541B441C18C9E5007BD2E3 /* main.m in Sources */,
 				6A17EE971C27C7A700254B8B /* BackgroundPlayer.m in Sources */,
-				6A1802F81C2089FE00E6E39D /* TestRotationYViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,7 +371,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6A541B5E1C18C9E5007BD2E3 /* FirstAnimationDemoTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -554,13 +484,16 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AD01A0E5EAC8B50786C4DAD2 /* Pods.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				INFOPLIST_FILE = FirstAnimationDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/**";
 			};
 			name = Debug;
 		};
@@ -568,14 +501,17 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CA1D96E4174F7E7E13092FAF /* Pods.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				ENABLE_NS_ASSERTIONS = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				INFOPLIST_FILE = FirstAnimationDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/**";
 			};
 			name = Release;
 		};
