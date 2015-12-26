@@ -31,6 +31,7 @@
 		6A541B4F1C18C9E5007BD2E3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A541B4E1C18C9E5007BD2E3 /* Images.xcassets */; };
 		6A541B6E1C1A0E1F007BD2E3 /* SongTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A541B6C1C1A0E1F007BD2E3 /* SongTableViewCell.m */; };
 		6A541B6F1C1A0E1F007BD2E3 /* SongTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A541B6D1C1A0E1F007BD2E3 /* SongTableViewCell.xib */; };
+		6AE2E5A51C2F17900094D0E5 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 6AE2E5A41C2F17900094D0E5 /* README.md */; };
 		DC2A1524290F3C32EACD874E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3406B6A20D2B49D4EC6BA46B /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -83,6 +84,7 @@
 		6A541B6B1C1A0E1F007BD2E3 /* SongTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongTableViewCell.h; sourceTree = "<group>"; };
 		6A541B6C1C1A0E1F007BD2E3 /* SongTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongTableViewCell.m; sourceTree = "<group>"; };
 		6A541B6D1C1A0E1F007BD2E3 /* SongTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SongTableViewCell.xib; sourceTree = "<group>"; };
+		6AE2E5A41C2F17900094D0E5 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		AD01A0E5EAC8B50786C4DAD2 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		CA1D96E4174F7E7E13092FAF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -156,6 +158,7 @@
 				6A17EE9C1C293A0700254B8B /* SimpleCircularProgressView.m */,
 				6A17EED91C2A925600254B8B /* SimpleWaveHistogramView.h */,
 				6A17EEDA1C2A925600254B8B /* SimpleWaveHistogramView.m */,
+				6AE2E5A41C2F17900094D0E5 /* README.md */,
 				6A541B4E1C18C9E5007BD2E3 /* Images.xcassets */,
 				6A09BEBF1C1D43C1009C415C /* LaunchScreen.xib */,
 				6A09BEC21C1D43CC009C415C /* Main.storyboard */,
@@ -359,6 +362,7 @@
 				6A17EEDB1C2A925600254B8B /* SimpleWaveHistogramView.m in Sources */,
 				6A09BECF1C1DEFA7009C415C /* SongItem.m in Sources */,
 				6A09BEC91C1DD4C9009C415C /* SongTableViewHeader.m in Sources */,
+				6AE2E5A51C2F17900094D0E5 /* README.md in Sources */,
 				6A541B471C18C9E5007BD2E3 /* AppDelegate.m in Sources */,
 				6A09BED31C1E8909009C415C /* PlayingViewController.m in Sources */,
 				6A09BECC1C1DEEAE009C415C /* SongStore.m in Sources */,
