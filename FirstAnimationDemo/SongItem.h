@@ -12,7 +12,7 @@
 
 @property (strong, nonatomic) NSString *title;
 @property (strong, nonatomic) NSString *artist;
-@property (assign, nonatomic) NSInteger *votes;
+@property (assign, nonatomic) NSInteger votes;
 
 -(id)initWithTitle:(NSString *)title artist:(NSString*)artist votes:(NSInteger)votes;
 

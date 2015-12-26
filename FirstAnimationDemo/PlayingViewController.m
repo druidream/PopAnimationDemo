@@ -89,7 +89,7 @@
     progressView.progress = 0.3;
     progressView.trackTintColor = [UIColor colorWithWhite:1 alpha:0.3];
     progressView.tintColor = [UIColor colorWithWhite:1 alpha:0.8];
-    progressView.progressImage = [UIImage imageNamed:@"navback"];
+//    progressView.progressImage = [UIImage imageNamed:@"navback"];
     
     UIImage *mask = [UIImage imageNamed:@"pause-mask"];
     CALayer* maskLayer = [CALayer layer];
@@ -257,23 +257,25 @@
 
 - (void)currentTime:(NSTimeInterval)currentTime withDuration:(NSTimeInterval)duration
 {
-    progressView.progress = currentTime / duration;
-    [progressView setNeedsDisplay];
-    
-    // update text
-    NSString *currentTimeString = [NSString stringWithFormat:@"%2li:%02li",
-                                   lround(floor(currentTime / 60.)) % 60,
-                                   lround(floor(currentTime)) % 60];
-    if (![currentTimeString isEqualToString:elapsedLabel.text]) {
-        [elapsedLabel setText:currentTimeString];
-    }
-    
-    if (!totalLabel.text) {
-        NSString *durationString = [NSString stringWithFormat:@"%2li:%02li",
-                                    lround(floor(duration / 60.)) % 60,
-                                    lround(floor(duration)) % 60];
-        [totalLabel setText:durationString];
-    }
+    dispatch_async(dispatch_get_main_queue(), ^{
+        progressView.progress = currentTime / duration;
+        [progressView setNeedsDisplay];
+        
+        // update text
+        NSString *currentTimeString = [NSString stringWithFormat:@"%2li:%02li",
+                                       lround(floor(currentTime / 60.)) % 60,
+                                       lround(floor(currentTime)) % 60];
+        if (![currentTimeString isEqualToString:elapsedLabel.text]) {
+            [elapsedLabel setText:currentTimeString];
+        }
+        
+        if (!totalLabel.text) {
+            NSString *durationString = [NSString stringWithFormat:@"%2li:%02li",
+                                        lround(floor(duration / 60.)) % 60,
+                                        lround(floor(duration)) % 60];
+            [totalLabel setText:durationString];
+        }
+    });
 }
 
 #pragma mark - Private

@@ -11,7 +11,7 @@
 #import "UIKit/UIViewController.h"
 
 @implementation BackgroundPlayer
-@synthesize player;
+@synthesize player=_player;
 
 static BackgroundPlayer *instance = nil;
 
@@ -28,8 +28,8 @@ static BackgroundPlayer *instance = nil;
 
 - (BOOL)isPlaying
 {
-    if (player) {
-        return [player isPlaying];
+    if (_player) {
+        return [_player isPlaying];
     }
     return NO;
 }
@@ -41,46 +41,46 @@ static BackgroundPlayer *instance = nil;
     }
     NSError *error = nil;
     [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayAndRecord error:&error];
-    player = [[AVAudioPlayer alloc] initWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"Silent Roar-euphoria" withExtension:@"mp3"] error:nil];
-    [player prepareToPlay];
-    [player setMeteringEnabled:YES];
-    [player play];
+    _player = [[AVAudioPlayer alloc] initWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"Silent Roar-euphoria" withExtension:@"mp3"] error:nil];
+    [_player prepareToPlay];
+    [_player setMeteringEnabled:YES];
+    [_player play];
     
     // NSTimer running in background thread
-    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(sendCurrentProgress:) userInfo:nil repeats:YES];
+    NSTimer *timer = [NSTimer timerWithTimeInterval:0.1 target:self selector:@selector(sendCurrentProgress:) userInfo:nil repeats:YES];
     [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSDefaultRunLoopMode];
     [[NSRunLoop currentRunLoop] run]    ;
 }
 
 - (float)normalizedPowerLevel
 {
-    [player updateMeters];
+    [_player updateMeters];
     
     CGFloat normalizedValue;
-    normalizedValue = [self _normalizedPowerLevelFromDecibels:[player averagePowerForChannel:0]];
+    normalizedValue = [self _normalizedPowerLevelFromDecibels:[_player averagePowerForChannel:0]];
     return normalizedValue;
 }
 
 - (float)progress
 {
-    return player.currentTime/player.duration;
+    return _player.currentTime/_player.duration;
 }
 
 - (NSTimeInterval)currentTime
 {
-    return player.currentTime;
+    return _player.currentTime;
 }
 
 - (NSTimeInterval)duration
 {
-    return player.duration;
+    return _player.duration;
 }
 
 #pragma mark - private
 
 - (void)sendCurrentProgress:(NSTimer *)timer
 {
-    [_delegate currentTime:player.currentTime withDuration:player.duration];
+    [_delegate currentTime:_player.currentTime withDuration:_player.duration];
 }
 
 - (CGFloat)_normalizedPowerLevelFromDecibels:(CGFloat)decibels

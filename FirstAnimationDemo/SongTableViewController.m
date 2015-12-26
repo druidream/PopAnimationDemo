@@ -130,7 +130,11 @@
         }
     }
     
-    cell.progressView.percent = time / duration;
+    if ([cell respondsToSelector:@selector(progressView)]) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            cell.progressView.percent = time / duration;
+        });
+    }
 }
 
 #pragma mark - Private

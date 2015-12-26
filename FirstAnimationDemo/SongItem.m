@@ -17,7 +17,7 @@
     if (self) {
         self.title = title;
         self.artist = artist;
-        self.votes = (int)votes;
+        self.votes = votes;
     }
     return self;
 }
