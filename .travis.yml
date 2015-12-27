@@ -1,0 +1,5 @@
+language: objective-c
+xcode_workspace: FirstAnimationDemo.xcworkspace
+xcode_sdk:
+  - iphonesimulator
+  - iphonesimulator8.1
