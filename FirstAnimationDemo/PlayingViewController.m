@@ -8,6 +8,8 @@
 
 #import "PlayingViewController.h"
 #import "BackgroundPlayer.h"
+#import "BackgroundImageProcessor.h"
+#import "DDGradiantView.h"
 
 #import <pop/POP.h>
 #import "GPUImageiOSBlurFilter.h"
@@ -58,28 +60,40 @@
     self.elapsedLabel.text = nil;
     self.totalLabel.text = nil;
     
-    UIImage * image = [UIImage imageNamed:@"sample.jpg"];
-    GPUImageRGBFilter *f = [[GPUImageRGBFilter alloc]init];
-    f.green = 0.6;
-    f.red = 0.5;
-    f.blue = 0.8;
-    UIImage *filteredImg = [f imageByFilteringImage:image];
-
-    // TODO: halo effect
+//    UIImage * image = [UIImage imageNamed:@"sample.jpg"];
+//    GPUImageRGBFilter *f = [[GPUImageRGBFilter alloc]init];
+//    f.green = 0.6;
+//    f.red = 0.5;
+//    f.blue = 0.8;
+//    UIImage *filteredImg = [f imageByFilteringImage:image];
+//
+//    // TODO: halo effect
+//    
+//    GPUImageiOSBlurFilter * blurFilter = [[GPUImageiOSBlurFilter alloc] init];
+//    blurFilter.blurRadiusInPixels = 1.0;
+//    blurFilter.downsampling = 16.0;
+//    UIImage *blurredImage = [blurFilter imageByFilteringImage:filteredImg];
+//    UIImageView *bgView = [[UIImageView alloc] initWithImage:blurredImage];
+//    [bgView setContentMode:UIViewContentModeScaleAspectFill];
+//
+//    [bgView setBounds:[UIScreen mainScreen].bounds];
+//    [bgView setFrame:CGRectMake(0, 0, bgView.bounds.size.width, bgView.bounds.size.height)];
+    //    bgView.contentMode = UIViewContentModeScaleAspectFill;
+    UIImage *bgImg = [[BackgroundImageProcessor sharedInstance] bg];
+    UIImageView *backgroundImageView = [[UIImageView alloc] initWithImage:bgImg];
+    [backgroundImageView setFrame:CGRectMake(0, 0, 320, 568)];
+    [backgroundImageView setContentMode:UIViewContentModeScaleAspectFill];
+    [backgroundImageView setClipsToBounds:YES];
+    DDGradiantView *view = [[DDGradiantView alloc] initWithFrame:CGRectMake(0, 0, 320, 568)];
+    view.userInteractionEnabled = NO;
+    view.backgroundColor = [UIColor clearColor];
+    [backgroundImageView addSubview:view];
     
-    GPUImageiOSBlurFilter * blurFilter = [[GPUImageiOSBlurFilter alloc] init];
-    blurFilter.blurRadiusInPixels = 1.0;
-    blurFilter.downsampling = 16.0;
-    UIImage *blurredImage = [blurFilter imageByFilteringImage:filteredImg];
-    UIImageView *bgView = [[UIImageView alloc] initWithImage:blurredImage];
-    [bgView setContentMode:UIViewContentModeScaleAspectFill];
-
-    [bgView setBounds:[UIScreen mainScreen].bounds];
-    [bgView setFrame:CGRectMake(0, 0, bgView.bounds.size.width, bgView.bounds.size.height)];
-    bgView.contentMode = UIViewContentModeScaleAspectFill;
-    [self.view addSubview:bgView];
-    [self.view sendSubviewToBack:bgView];
-    bgView.layer.zPosition = -10000;
+    [self.view addSubview:backgroundImageView];
+    [self.view sendSubviewToBack:backgroundImageView];
+    [self.view addSubview:backgroundImageView];
+    [self.view sendSubviewToBack:backgroundImageView];
+    backgroundImageView.layer.zPosition = -10000;
     
     // animation
     CATransform3D rotationAndPerspectiveTransform = CATransform3DIdentity;
@@ -125,6 +139,7 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    NSLog(@"%d", [self.view.subviews containsObject:[[BackgroundImageProcessor sharedInstance] bg]]);
     [super viewWillAppear:animated];
 
     loopIcon.layer.opacity = 0;

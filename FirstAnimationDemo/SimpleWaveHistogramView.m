@@ -14,6 +14,7 @@
 - (void)startAnimating
 {
     [self setHidden:NO];
+    [timer invalidate];
     timer = [NSTimer scheduledTimerWithTimeInterval:0.2 target:self selector:@selector(setNeedsDisplay) userInfo:nil repeats:YES];
 }
 

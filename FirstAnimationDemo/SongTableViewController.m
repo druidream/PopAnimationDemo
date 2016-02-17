@@ -12,6 +12,8 @@
 #import "SongTableViewHeader.h"
 #import "SongItem.h"
 #import "SongStore.h"
+#import "DDGradiantView.h"
+#import "BackgroundImageProcessor.h"
 
 #import <pop/POP.h>
 #import "GPUImageiOSBlurFilter.h"
@@ -33,7 +35,22 @@
 {
     [super viewDidLoad];
     
-    self.tableView.backgroundView = [self _blurredBackground];
+    UIImage *bgImg = [[BackgroundImageProcessor sharedInstance] bg];
+    UIImageView *backgroundImageView = [[UIImageView alloc] initWithImage:bgImg];
+    [backgroundImageView setFrame:CGRectMake(0, 0, 320, 568)];
+    [backgroundImageView setContentMode:UIViewContentModeScaleAspectFill];
+    [backgroundImageView setClipsToBounds:YES];
+    DDGradiantView *view = [[DDGradiantView alloc] initWithFrame:CGRectMake(0, 0, 320, 568)];
+    view.userInteractionEnabled = NO;
+    view.backgroundColor = [UIColor clearColor];
+    [backgroundImageView addSubview:view];
+    
+    [self.view addSubview:backgroundImageView];
+    [self.view sendSubviewToBack:backgroundImageView];
+    
+//    self.tableView.backgroundView = [self _blurredBackground];
+//    self.tableView.backgroundView = [[BackgroundImageProcessor sharedInstance] bg];
+    self.tableView.backgroundColor = [UIColor clearColor];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
@@ -46,7 +63,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
+
     [self prefersStatusBarHidden];
     [self performSelector:@selector(setNeedsStatusBarAppearanceUpdate)];
 
@@ -153,6 +170,10 @@
     UIImageView *bgView = [[UIImageView alloc] initWithImage:blurredImage];
     [bgView setContentMode:UIViewContentModeScaleAspectFill];
     [bgView setClipsToBounds:YES];
+    DDGradiantView *view = [[DDGradiantView alloc] initWithFrame:CGRectMake(0, 0, 320, 568)];
+    view.userInteractionEnabled = NO;
+    view.backgroundColor = [UIColor clearColor];
+    [bgView addSubview:view];
     return bgView;
 }
 
@@ -171,8 +192,8 @@
             animation.property = [POPAnimatableProperty propertyWithName:kPOPLayerTranslationX];
             animation.fromValue = @(300.0);
             animation.toValue = @0.0;
-            animation.springBounciness = 10.0;
-            animation.springSpeed = 4;
+            animation.springBounciness = 15.0;
+            animation.springSpeed = 5;
             
             [cell.layer pop_addAnimation:animation forKey:nil];
         });
