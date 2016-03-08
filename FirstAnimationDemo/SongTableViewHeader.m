@@ -10,16 +10,17 @@
 
 @implementation SongTableViewHeader
 
-- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
-{
-    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+- (id)initWithFrame:(CGRect)frame{
+    self = [super initWithFrame:frame];
     if (self) {
-        
+
         self.selectionStyle = UITableViewCellSelectionStyleNone;
         
         self.backgroundColor = [UIColor clearColor];
         
-        UILabel *label1 = [[UILabel alloc] initWithFrame:CGRectMake(0, 15, 320, 20)];
+        CGFloat width = frame.size.width;
+        
+        UILabel *label1 = [[UILabel alloc] initWithFrame:CGRectMake(0, 15, width, 20)];
         [label1 setBackgroundColor:[UIColor clearColor]];
         NSAttributedString *attributedString =[[NSAttributedString alloc] initWithString:@"DANCE CLUB" attributes:@{NSKernAttributeName : @(2.0f)}];
         [label1 setAttributedText:attributedString];
@@ -30,7 +31,7 @@
         [label1 setShadowOffset:CGSizeMake(0, 0)];
         [self.contentView addSubview:label1];
         
-        UILabel *label2 = [[UILabel alloc] initWithFrame:CGRectMake(0, 40, 320, 50)];
+        UILabel *label2 = [[UILabel alloc] initWithFrame:CGRectMake(0, 40, width, 50)];
         [label2 setBackgroundColor:[UIColor clearColor]];
         [label2 setText:@"Ministry of Fun"];
         [label2 setTextAlignment:NSTextAlignmentCenter];
@@ -41,7 +42,7 @@
         [label2 setFont:font];
         [self.contentView addSubview:label2];
         
-        UIButton *button1 = [[UIButton alloc] initWithFrame:CGRectMake(30, 100, 260, 40)];
+        UIButton *button1 = [[UIButton alloc] initWithFrame:CGRectMake(30, 100, width - 30*2, 40)];
         attributedString =[[NSAttributedString alloc] initWithString:@"ADD A SONG" attributes:@{NSKernAttributeName : @(2.0f)}];
         [button1 setAttributedTitle:attributedString forState:UIControlStateNormal];
         button1.titleLabel.font = [UIFont fontWithName:@"Arial" size:14.0];

@@ -63,10 +63,10 @@
     // background image
     UIImage *bgImg = [[BackgroundImageProcessor sharedInstance] bg];
     UIImageView *backgroundImageView = [[UIImageView alloc] initWithImage:bgImg];
-    [backgroundImageView setFrame:self.view.bounds];
+    [backgroundImageView setFrame:[UIScreen mainScreen].applicationFrame];
     [backgroundImageView setContentMode:UIViewContentModeScaleAspectFill];
     [backgroundImageView setClipsToBounds:YES];
-    DDGradiantView *view = [[DDGradiantView alloc] initWithFrame:self.view.bounds];
+    DDGradiantView *view = [[DDGradiantView alloc] initWithFrame:[UIScreen mainScreen].applicationFrame];
     view.userInteractionEnabled = NO;
     view.backgroundColor = [UIColor clearColor];
     [backgroundImageView addSubview:view];
@@ -134,6 +134,9 @@
     animation.toValue = @0.0;
     animation.springBounciness = 24.0;
     animation.springSpeed = 30;
+//    animation.dynamicsFriction = 1;
+//    animation.dynamicsMass = 1;
+//    animation.dynamicsTension = 100;
     [coverImage.layer setAnchorPoint:CGPointMake(0, 0.5)];
     CGPoint positionOld = coverImage.layer.position;
     CGPoint positionNew = CGPointMake(0, 0);

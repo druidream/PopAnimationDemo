@@ -140,6 +140,11 @@
                         <constraint firstItem="q1T-z7-vBR" firstAttribute="centerX" secondItem="Yas-34-DCD" secondAttribute="centerX" id="pzw-cG-G6i"/>
                         <constraint firstItem="4tO-mH-rYM" firstAttribute="centerX" secondItem="Yas-34-DCD" secondAttribute="centerX" multiplier="1.4" id="xiQ-m8-laE"/>
                     </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="pyb-4X-ZN0"/>
+                        </mask>
+                    </variation>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vkh-P8-EyP" userLabel="Bottom Bar">
                     <rect key="frame" x="0.0" y="530" width="600" height="70"/>

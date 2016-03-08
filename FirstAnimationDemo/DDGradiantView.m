@@ -44,8 +44,7 @@
     // 释放色彩空间
     CGColorSpaceRelease(colorSpaceRef);
     
-    CGContextDrawLinearGradient(context, gradientRef, CGPointMake(0.0f, 0.0f), CGPointMake(320.0f, 460.0f), 0);
-    
+    CGContextDrawLinearGradient(context, gradientRef, CGPointMake(0.0f, 0.0f), CGPointMake(self.frame.size.width, self.frame.size.height), 0);
     // 释放渐变对象
     CGGradientRelease(gradientRef);
 }

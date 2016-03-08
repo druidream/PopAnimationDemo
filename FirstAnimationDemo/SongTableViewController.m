@@ -38,10 +38,11 @@
     // background view
     UIImage *bgImg = [[BackgroundImageProcessor sharedInstance] bg];
     UIImageView *backgroundImageView = [[UIImageView alloc] initWithImage:bgImg];
-    [backgroundImageView setFrame:self.view.bounds];
+    [backgroundImageView setFrame:[UIScreen mainScreen].applicationFrame];
     [backgroundImageView setContentMode:UIViewContentModeScaleAspectFill];
     [backgroundImageView setClipsToBounds:YES];
-    DDGradiantView *view = [[DDGradiantView alloc] initWithFrame:self.view.bounds];
+    
+    DDGradiantView *view = [[DDGradiantView alloc] initWithFrame:[UIScreen mainScreen].applicationFrame];
     view.userInteractionEnabled = NO;
     view.backgroundColor = [UIColor clearColor];
     [backgroundImageView addSubview:view];
@@ -102,7 +103,9 @@
     NSMutableArray *store = [SongStore sharedStore];
     
     if (indexPath.row == 0) {
-        return [[SongTableViewHeader alloc] init];
+        SongTableViewHeader *header = [[SongTableViewHeader alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 170)];
+        return header;
+        
     } else {
         static NSString *TableSampleIdentifier = @"SongTableViewCell";
         SongTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:TableSampleIdentifier  forIndexPath:indexPath];
@@ -149,28 +152,6 @@
 }
 
 #pragma mark - Private
-- (UIView *)_blurredBackground
-{
-    UIImage *image = [UIImage imageNamed:@"sample.jpg"];
-    GPUImageRGBFilter *f = [[GPUImageRGBFilter alloc]init];
-    f.red = 0.6;
-    f.green = 0.6;
-    f.blue = 0.8;
-    UIImage *filteredImg = [f imageByFilteringImage:image];
-    GPUImageiOSBlurFilter * blurFilter = [[GPUImageiOSBlurFilter alloc] init];
-    blurFilter.blurRadiusInPixels = 1.0;
-    blurFilter.downsampling = 16.0;
-    UIImage *blurredImage = [blurFilter imageByFilteringImage:filteredImg];
-    UIImageView *bgView = [[UIImageView alloc] initWithImage:blurredImage];
-    [bgView setContentMode:UIViewContentModeScaleAspectFill];
-    [bgView setClipsToBounds:YES];
-    DDGradiantView *view = [[DDGradiantView alloc] initWithFrame:CGRectMake(0, 0, 320, 568)];
-    view.userInteractionEnabled = NO;
-    view.backgroundColor = [UIColor clearColor];
-    [bgView addSubview:view];
-    return bgView;
-}
-
 - (void)_animateInterface
 {
     NSArray *visibleCells = self.tableView.visibleCells;
