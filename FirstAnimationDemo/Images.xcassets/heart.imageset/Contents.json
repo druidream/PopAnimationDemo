@@ -2,15 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x",
-      "filename" : "1450796195_icon-ios7-heart-outline.png"
+      "filename" : "1457398653_icon-ios7-heart-outline.png",
+      "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "1457398216_icon-ios7-heart-outline.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
+      "filename" : "1457398201_icon-ios7-heart-outline.png",
       "scale" : "3x"
     }
   ],

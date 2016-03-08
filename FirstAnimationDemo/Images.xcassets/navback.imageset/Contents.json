@@ -2,15 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x",
-      "filename" : "navback.png"
+      "filename" : "navback.png",
+      "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "1457399071_circle-arrow_back-previous-outline-stroke.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
+      "filename" : "1457399086_circle-arrow_back-previous-outline-stroke.png",
       "scale" : "3x"
     }
   ],
