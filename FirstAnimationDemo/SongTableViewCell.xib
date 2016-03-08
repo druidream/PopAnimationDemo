@@ -27,8 +27,8 @@
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Votes" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fjh-HB-sdD" userLabel="votesLabel">
-                        <rect key="frame" x="240" y="40" width="57" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Votes" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fjh-HB-sdD" userLabel="votesLabel">
+                        <rect key="frame" x="265" y="46" width="32" height="15"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
@@ -39,11 +39,11 @@
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HaP-yR-TFF" customClass="SimpleCircularProgressView">
-                        <rect key="frame" x="16" y="16" width="40" height="40"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HaP-yR-TFF" customClass="SimpleCircularProgressView">
+                        <rect key="frame" x="23" y="22" width="40" height="40"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kp3-kk-dYQ" customClass="SimpleWaveHistogramView">
-                                <rect key="frame" x="14" y="13" width="16" height="13"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kp3-kk-dYQ" customClass="SimpleWaveHistogramView">
+                                <rect key="frame" x="14" y="14" width="12" height="12"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="12" id="2rX-M3-Yx1"/>
@@ -54,12 +54,16 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="40" id="1Iw-JA-LoU"/>
+                            <constraint firstItem="Kp3-kk-dYQ" firstAttribute="centerY" secondItem="HaP-yR-TFF" secondAttribute="centerY" id="D08-hp-72z"/>
+                            <constraint firstItem="Kp3-kk-dYQ" firstAttribute="centerX" secondItem="HaP-yR-TFF" secondAttribute="centerX" id="dPR-fO-724"/>
                             <constraint firstAttribute="height" constant="40" id="z3s-LU-Pvs"/>
                         </constraints>
                     </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="HaP-yR-TFF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="14" id="3BN-AK-c8J"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="fjh-HB-sdD" secondAttribute="trailing" constant="15" id="Oc7-hl-IpK"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="fjh-HB-sdD" secondAttribute="bottom" id="Y5Z-OS-d0M"/>
                     <constraint firstItem="HaP-yR-TFF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="15" id="ZDQ-jD-SNX"/>
                 </constraints>
             </tableViewCellContentView>
