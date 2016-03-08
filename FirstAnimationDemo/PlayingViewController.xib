@@ -90,14 +90,14 @@
                     <rect key="frame" x="0.0" y="421" width="600" height="101"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backward" translatesAutoresizingMaskIntoConstraints="NO" id="GY3-sr-dGv">
-                            <rect key="frame" x="410" y="45" width="20" height="12"/>
+                            <rect key="frame" x="170" y="45" width="20" height="12"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="12" id="DZY-Uo-C9B"/>
                                 <constraint firstAttribute="width" constant="20" id="d4g-Ab-lXU"/>
                             </constraints>
                         </imageView>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="forward" translatesAutoresizingMaskIntoConstraints="NO" id="4tO-mH-rYM">
-                            <rect key="frame" x="170" y="45" width="20" height="12"/>
+                            <rect key="frame" x="410" y="45" width="20" height="12"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="20" id="3zk-QG-Q5C"/>
                                 <constraint firstAttribute="height" constant="12" id="ezL-r8-4LV"/>
@@ -135,10 +135,10 @@
                         <constraint firstItem="4tO-mH-rYM" firstAttribute="centerY" secondItem="Yas-34-DCD" secondAttribute="centerY" id="MO5-LJ-bvS"/>
                         <constraint firstItem="Scz-cw-Y7P" firstAttribute="centerX" secondItem="Yas-34-DCD" secondAttribute="centerX" multiplier="0.3" id="VKB-5T-noO"/>
                         <constraint firstItem="GY3-sr-dGv" firstAttribute="centerY" secondItem="Yas-34-DCD" secondAttribute="centerY" id="VUX-m7-y1b"/>
-                        <constraint firstItem="GY3-sr-dGv" firstAttribute="centerX" secondItem="Yas-34-DCD" secondAttribute="centerX" multiplier="1.4" id="e71-V9-uav"/>
+                        <constraint firstItem="GY3-sr-dGv" firstAttribute="centerX" secondItem="Yas-34-DCD" secondAttribute="centerX" multiplier="0.6" id="e71-V9-uav"/>
                         <constraint firstAttribute="width" constant="600" id="pyb-4X-ZN0"/>
                         <constraint firstItem="q1T-z7-vBR" firstAttribute="centerX" secondItem="Yas-34-DCD" secondAttribute="centerX" id="pzw-cG-G6i"/>
-                        <constraint firstItem="4tO-mH-rYM" firstAttribute="centerX" secondItem="Yas-34-DCD" secondAttribute="centerX" multiplier="0.6" id="xiQ-m8-laE"/>
+                        <constraint firstItem="4tO-mH-rYM" firstAttribute="centerX" secondItem="Yas-34-DCD" secondAttribute="centerX" multiplier="1.4" id="xiQ-m8-laE"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vkh-P8-EyP" userLabel="Bottom Bar">

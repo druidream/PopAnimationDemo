@@ -33,7 +33,7 @@
 		6AA6589B1C36D7FA0003FB42 /* DDGradiantView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AA6589A1C36D7FA0003FB42 /* DDGradiantView.m */; };
 		6AA6589E1C495D370003FB42 /* BackgroundImageProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AA6589D1C495D370003FB42 /* BackgroundImageProcessor.m */; };
 		6ADA90DC1C7422AA00C31F62 /* sample.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6ADA90DB1C7422AA00C31F62 /* sample.jpg */; };
-		DC2A1524290F3C32EACD874E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3406B6A20D2B49D4EC6BA46B /* libPods.a */; };
+		CFB0C05804022B9C0E82FEF1 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B00593E218039C3BAFB678D /* Pods.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +47,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3406B6A20D2B49D4EC6BA46B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A09BEC01C1D43C1009C415C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		6A09BEC31C1D43CC009C415C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6A09BEC71C1DD4C9009C415C /* SongTableViewHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongTableViewHeader.h; sourceTree = "<group>"; };
@@ -90,6 +89,7 @@
 		6AA6589D1C495D370003FB42 /* BackgroundImageProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundImageProcessor.m; sourceTree = "<group>"; };
 		6ADA90DB1C7422AA00C31F62 /* sample.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sample.jpg; sourceTree = "<group>"; };
 		6AE2E5A41C2F17900094D0E5 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		8B00593E218039C3BAFB678D /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD01A0E5EAC8B50786C4DAD2 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		CA1D96E4174F7E7E13092FAF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -104,7 +104,7 @@
 				6A09BEDC1C1F26D1009C415C /* UIKit.framework in Frameworks */,
 				6A09BEDA1C1F26A8009C415C /* CoreGraphics.framework in Frameworks */,
 				6A09BED81C1F2602009C415C /* QuartzCore.framework in Frameworks */,
-				DC2A1524290F3C32EACD874E /* libPods.a in Frameworks */,
+				CFB0C05804022B9C0E82FEF1 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,7 +195,7 @@
 				6A09BEDB1C1F26D1009C415C /* UIKit.framework */,
 				6A09BED91C1F26A8009C415C /* CoreGraphics.framework */,
 				6A09BED71C1F2602009C415C /* QuartzCore.framework */,
-				3406B6A20D2B49D4EC6BA46B /* libPods.a */,
+				8B00593E218039C3BAFB678D /* Pods.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -505,7 +505,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				INFOPLIST_FILE = FirstAnimationDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "dream.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -524,7 +524,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				INFOPLIST_FILE = FirstAnimationDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "dream.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
