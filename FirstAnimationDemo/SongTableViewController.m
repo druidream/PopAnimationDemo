@@ -35,6 +35,7 @@
 {
     [super viewDidLoad];
     
+    // background view
     UIImage *bgImg = [[BackgroundImageProcessor sharedInstance] bg];
     UIImageView *backgroundImageView = [[UIImageView alloc] initWithImage:bgImg];
     [backgroundImageView setFrame:self.view.bounds];
@@ -48,8 +49,6 @@
     [self.view addSubview:backgroundImageView];
     [self.view sendSubviewToBack:backgroundImageView];
     
-//    self.tableView.backgroundView = [self _blurredBackground];
-//    self.tableView.backgroundView = [[BackgroundImageProcessor sharedInstance] bg];
     self.tableView.backgroundColor = [UIColor clearColor];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.dataSource = self;
@@ -84,11 +83,6 @@
 }
 
 #pragma mark - TableView delegates
-- (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return 1;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return 7;

@@ -28,7 +28,6 @@
         [label1 setFont:[UIFont fontWithName:@"Avenir-Black" size:12.0]];
         [label1 setShadowColor:[UIColor whiteColor]];
         [label1 setShadowOffset:CGSizeMake(0, 0)];
-        //lable1.shadowBlur = 0.5f;
         [self.contentView addSubview:label1];
         
         UILabel *label2 = [[UILabel alloc] initWithFrame:CGRectMake(0, 40, 320, 50)];
@@ -39,7 +38,6 @@
         UIFont *font = [UIFont fontWithName:@"Helvetica-Light" size:28.0];
         [label2 setShadowColor:[UIColor whiteColor]];
         [label2 setShadowOffset:CGSizeMake(0, 0)];
-//        lable2.shadowBlur = 0.5f;
         [label2 setFont:font];
         [self.contentView addSubview:label2];
         

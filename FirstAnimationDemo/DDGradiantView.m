@@ -14,45 +14,7 @@
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect {
     // Drawing code
-//    CGContextRef myContext = UIGraphicsGetCurrentContext();
-//    CGGradientRef myGradient;
-//    CGColorSpaceRef myColorspace;
-//    size_t num_locations = 2;
-//    CGFloat locations[2] = { 0.0, 1.0 };
-//    CGFloat components[8] = { 1.0, 0.5, 0.4, 1.0,  // Start color
-//        0.8, 0.8, 0.3, 1.0 }; // End color
-//    
-////    myColorspace = CGColorSpaceCreateWithName(kCGColorSpaceGenericRGB);
-//    myColorspace = CGColorSpaceCreateDeviceRGB();
-//    myGradient = CGGradientCreateWithColorComponents (myColorspace, components,
-//                                                      locations, num_locations);
-//    
-////    CGPoint myStartPoint, myEndPoint;
-////    myStartPoint.x = 0.0;
-////    myStartPoint.y = 0.0;
-////    myEndPoint.x = 1.0;
-////    myEndPoint.y = 1.0;
-////    CGContextDrawLinearGradient (myContext, myGradient, myStartPoint, myEndPoint, 0);
-//    
-//    CGPoint myStartPoint, myEndPoint;
-//    CGFloat myStartRadius, myEndRadius;
-//    myStartPoint.x = 0.15;
-//    myStartPoint.y = 0.15;
-//    myEndPoint.x = 0.5;
-//    myEndPoint.y = 0.5;
-//    myStartRadius = 0.1;
-//    myEndRadius = 0.25;
-//    CGContextDrawRadialGradient (myContext, myGradient, myStartPoint,
-//                                 myStartRadius, myEndPoint, myEndRadius,
-//                                 kCGGradientDrawsAfterEndLocation);
-    
     CGContextRef context = UIGraphicsGetCurrentContext();
-//    UIImage *image = [UIImage imageNamed:@"sample.jpg"];
-//    CGContextTranslateCTM(context, 0, 300);
-//    CGContextScaleCTM(context, 1.0, -1.0);
-//    CGContextDrawImage(context, CGRectMake(0, 0, 300, 300), image.CGImage);
-    
-//    CGCon
     
     // 创建色彩空间对象
     CGColorSpaceRef colorSpaceRef = CGColorSpaceCreateDeviceRGB();
@@ -82,9 +44,6 @@
     // 释放色彩空间
     CGColorSpaceRelease(colorSpaceRef);
     
-    CGGradientDrawingOptions options = kCGGradientDrawsAfterEndLocation;
-    
-//    CGContextDrawRadialGradient(context, gradientRef, CGPointMake(200.0f, 320.0f), 290.0f, CGPointMake(200.0f, 320.0f), 400.0f, options);
     CGContextDrawLinearGradient(context, gradientRef, CGPointMake(0.0f, 0.0f), CGPointMake(320.0f, 460.0f), 0);
     
     // 释放渐变对象
