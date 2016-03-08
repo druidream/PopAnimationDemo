@@ -33,7 +33,6 @@
 		6AA6589B1C36D7FA0003FB42 /* DDGradiantView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AA6589A1C36D7FA0003FB42 /* DDGradiantView.m */; };
 		6AA6589E1C495D370003FB42 /* BackgroundImageProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AA6589D1C495D370003FB42 /* BackgroundImageProcessor.m */; };
 		6ADA90DC1C7422AA00C31F62 /* sample.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6ADA90DB1C7422AA00C31F62 /* sample.jpg */; };
-		6AE2E5A51C2F17900094D0E5 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 6AE2E5A41C2F17900094D0E5 /* README.md */; };
 		DC2A1524290F3C32EACD874E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3406B6A20D2B49D4EC6BA46B /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -257,7 +256,7 @@
 		6A541B361C18C9E5007BD2E3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0600;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = dream;
 				TargetAttributes = {
 					6A541B3D1C18C9E5007BD2E3 = {
@@ -372,7 +371,6 @@
 				6A17EEDB1C2A925600254B8B /* SimpleWaveHistogramView.m in Sources */,
 				6A09BECF1C1DEFA7009C415C /* SongItem.m in Sources */,
 				6A09BEC91C1DD4C9009C415C /* SongTableViewHeader.m in Sources */,
-				6AE2E5A51C2F17900094D0E5 /* README.md in Sources */,
 				6A541B471C18C9E5007BD2E3 /* AppDelegate.m in Sources */,
 				6AA6589E1C495D370003FB42 /* BackgroundImageProcessor.m in Sources */,
 				6A09BED31C1E8909009C415C /* PlayingViewController.m in Sources */,
@@ -440,6 +438,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -508,6 +507,7 @@
 				INFOPLIST_FILE = FirstAnimationDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "dream.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/**";
 			};
@@ -526,6 +526,7 @@
 				INFOPLIST_FILE = FirstAnimationDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "dream.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/**";
 			};
@@ -545,6 +546,7 @@
 				);
 				INFOPLIST_FILE = FirstAnimationDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "dream.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FirstAnimationDemo.app/FirstAnimationDemo";
 			};
@@ -560,6 +562,7 @@
 				);
 				INFOPLIST_FILE = FirstAnimationDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "dream.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FirstAnimationDemo.app/FirstAnimationDemo";
 			};
