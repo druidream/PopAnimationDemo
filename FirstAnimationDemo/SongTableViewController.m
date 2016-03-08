@@ -37,10 +37,10 @@
     
     UIImage *bgImg = [[BackgroundImageProcessor sharedInstance] bg];
     UIImageView *backgroundImageView = [[UIImageView alloc] initWithImage:bgImg];
-    [backgroundImageView setFrame:CGRectMake(0, 0, 320, 568)];
+    [backgroundImageView setFrame:self.view.bounds];
     [backgroundImageView setContentMode:UIViewContentModeScaleAspectFill];
     [backgroundImageView setClipsToBounds:YES];
-    DDGradiantView *view = [[DDGradiantView alloc] initWithFrame:CGRectMake(0, 0, 320, 568)];
+    DDGradiantView *view = [[DDGradiantView alloc] initWithFrame:self.view.bounds];
     view.userInteractionEnabled = NO;
     view.backgroundColor = [UIColor clearColor];
     [backgroundImageView addSubview:view];
@@ -194,6 +194,7 @@
             animation.toValue = @0.0;
             animation.springBounciness = 15.0;
             animation.springSpeed = 5;
+
             
             [cell.layer pop_addAnimation:animation forKey:nil];
         });
