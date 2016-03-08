@@ -1,17 +1,14 @@
 PODS:
-  - FXLabel (1.5.8)
   - GPUImage (0.1.7)
   - pop (1.0.8)
   - SCSiriWaveformView (1.0.3)
 
 DEPENDENCIES:
-  - FXLabel
   - GPUImage
   - pop (~> 1.0.7)
   - SCSiriWaveformView
 
 SPEC CHECKSUMS:
-  FXLabel: 14f7d4abb0eb531a0824b327a86f5b790171207f
   GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
   pop: bb773ae2c791ca2629de13b347e7a8b450fa6a57
   SCSiriWaveformView: b8b2756af42addcd31900c3945f24edafefb5395

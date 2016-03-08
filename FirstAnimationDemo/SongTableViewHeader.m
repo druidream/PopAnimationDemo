@@ -7,7 +7,6 @@
 //
 
 #import "SongTableViewHeader.h"
-#import "FXLabel.h"
 
 @implementation SongTableViewHeader
 
@@ -20,29 +19,29 @@
         
         self.backgroundColor = [UIColor clearColor];
         
-        UILabel *lable1 = [[UILabel alloc] initWithFrame:CGRectMake(0, 15, 320, 20)];
-        [lable1 setBackgroundColor:[UIColor clearColor]];
+        UILabel *label1 = [[UILabel alloc] initWithFrame:CGRectMake(0, 15, 320, 20)];
+        [label1 setBackgroundColor:[UIColor clearColor]];
         NSAttributedString *attributedString =[[NSAttributedString alloc] initWithString:@"DANCE CLUB" attributes:@{NSKernAttributeName : @(2.0f)}];
-        [lable1 setAttributedText:attributedString];
-        [lable1 setTextColor:[UIColor colorWithWhite:1.0 alpha:0.2]];
-        [lable1 setTextAlignment:NSTextAlignmentCenter];
-        [lable1 setFont:[UIFont fontWithName:@"Avenir-Black" size:12.0]];
-        [lable1 setShadowColor:[UIColor whiteColor]];
-        [lable1 setShadowOffset:CGSizeMake(0, 0)];
+        [label1 setAttributedText:attributedString];
+        [label1 setTextColor:[UIColor colorWithWhite:1.0 alpha:0.2]];
+        [label1 setTextAlignment:NSTextAlignmentCenter];
+        [label1 setFont:[UIFont fontWithName:@"Avenir-Black" size:12.0]];
+        [label1 setShadowColor:[UIColor whiteColor]];
+        [label1 setShadowOffset:CGSizeMake(0, 0)];
         //lable1.shadowBlur = 0.5f;
-        [self.contentView addSubview:lable1];
+        [self.contentView addSubview:label1];
         
-        FXLabel *lable2 = [[FXLabel alloc] initWithFrame:CGRectMake(0, 40, 320, 50)];
-        [lable2 setBackgroundColor:[UIColor clearColor]];
-        [lable2 setText:@"Ministry of Fun"];
-        [lable2 setTextAlignment:NSTextAlignmentCenter];
-        [lable2 setTextColor:[UIColor colorWithWhite:1.0 alpha:0.6]];
+        UILabel *label2 = [[UILabel alloc] initWithFrame:CGRectMake(0, 40, 320, 50)];
+        [label2 setBackgroundColor:[UIColor clearColor]];
+        [label2 setText:@"Ministry of Fun"];
+        [label2 setTextAlignment:NSTextAlignmentCenter];
+        [label2 setTextColor:[UIColor colorWithWhite:1.0 alpha:0.6]];
         UIFont *font = [UIFont fontWithName:@"Helvetica-Light" size:28.0];
-        [lable2 setShadowColor:[UIColor whiteColor]];
-        [lable2 setShadowOffset:CGSizeMake(0, 0)];
-        lable2.shadowBlur = 0.5f;
-        [lable2 setFont:font];
-        [self.contentView addSubview:lable2];
+        [label2 setShadowColor:[UIColor whiteColor]];
+        [label2 setShadowOffset:CGSizeMake(0, 0)];
+//        lable2.shadowBlur = 0.5f;
+        [label2 setFont:font];
+        [self.contentView addSubview:label2];
         
         UIButton *button1 = [[UIButton alloc] initWithFrame:CGRectMake(30, 100, 260, 40)];
         attributedString =[[NSAttributedString alloc] initWithString:@"ADD A SONG" attributes:@{NSKernAttributeName : @(2.0f)}];
