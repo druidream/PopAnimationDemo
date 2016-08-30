@@ -12,8 +12,6 @@
 
 @interface PlayingViewController : UIViewController<PlayerDelegate>
 
-@property (weak, nonatomic) IBOutlet UIImageView *bgImage;
-
 @property (weak, nonatomic) IBOutlet UIImageView *coverImage;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *artistLabel;

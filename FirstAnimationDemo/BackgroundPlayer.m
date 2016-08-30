@@ -49,7 +49,7 @@ static BackgroundPlayer *instance = nil;
     // NSTimer running in background thread
     NSTimer *timer = [NSTimer timerWithTimeInterval:0.1 target:self selector:@selector(sendCurrentProgress:) userInfo:nil repeats:YES];
     [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSDefaultRunLoopMode];
-    [[NSRunLoop currentRunLoop] run]    ;
+    [[NSRunLoop currentRunLoop] run];
 }
 
 - (float)normalizedPowerLevel

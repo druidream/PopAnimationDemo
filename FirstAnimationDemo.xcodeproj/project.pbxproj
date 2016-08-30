@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22D60A331BCEA75919C68C09 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FF1023155D8255F56C90F93 /* libPods.a */; };
 		6A09BEC11C1D43C1009C415C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A09BEBF1C1D43C1009C415C /* LaunchScreen.xib */; };
 		6A09BEC41C1D43CC009C415C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A09BEC21C1D43CC009C415C /* Main.storyboard */; };
 		6A09BEC91C1DD4C9009C415C /* SongTableViewHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A09BEC81C1DD4C9009C415C /* SongTableViewHeader.m */; };
@@ -33,7 +34,6 @@
 		6AA6589B1C36D7FA0003FB42 /* DDGradiantView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AA6589A1C36D7FA0003FB42 /* DDGradiantView.m */; };
 		6AA6589E1C495D370003FB42 /* BackgroundImageProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AA6589D1C495D370003FB42 /* BackgroundImageProcessor.m */; };
 		6ADA90DC1C7422AA00C31F62 /* sample.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6ADA90DB1C7422AA00C31F62 /* sample.jpg */; };
-		CFB0C05804022B9C0E82FEF1 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B00593E218039C3BAFB678D /* Pods.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0FF1023155D8255F56C90F93 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A09BEC01C1D43C1009C415C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		6A09BEC31C1D43CC009C415C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6A09BEC71C1DD4C9009C415C /* SongTableViewHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongTableViewHeader.h; sourceTree = "<group>"; };
@@ -83,13 +84,14 @@
 		6A541B6B1C1A0E1F007BD2E3 /* SongTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongTableViewCell.h; sourceTree = "<group>"; };
 		6A541B6C1C1A0E1F007BD2E3 /* SongTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongTableViewCell.m; sourceTree = "<group>"; };
 		6A541B6D1C1A0E1F007BD2E3 /* SongTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SongTableViewCell.xib; sourceTree = "<group>"; };
+		6A6F8D7C1C9136610012A2C9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		6A6F8D7D1C9136610012A2C9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		6AA658991C36D7FA0003FB42 /* DDGradiantView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDGradiantView.h; sourceTree = "<group>"; };
 		6AA6589A1C36D7FA0003FB42 /* DDGradiantView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDGradiantView.m; sourceTree = "<group>"; };
 		6AA6589C1C495D370003FB42 /* BackgroundImageProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackgroundImageProcessor.h; sourceTree = "<group>"; };
 		6AA6589D1C495D370003FB42 /* BackgroundImageProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundImageProcessor.m; sourceTree = "<group>"; };
 		6ADA90DB1C7422AA00C31F62 /* sample.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sample.jpg; sourceTree = "<group>"; };
 		6AE2E5A41C2F17900094D0E5 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
-		8B00593E218039C3BAFB678D /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD01A0E5EAC8B50786C4DAD2 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		CA1D96E4174F7E7E13092FAF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -104,7 +106,7 @@
 				6A09BEDC1C1F26D1009C415C /* UIKit.framework in Frameworks */,
 				6A09BEDA1C1F26A8009C415C /* CoreGraphics.framework in Frameworks */,
 				6A09BED81C1F2602009C415C /* QuartzCore.framework in Frameworks */,
-				CFB0C05804022B9C0E82FEF1 /* Pods.framework in Frameworks */,
+				22D60A331BCEA75919C68C09 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,7 +197,7 @@
 				6A09BEDB1C1F26D1009C415C /* UIKit.framework */,
 				6A09BED91C1F26A8009C415C /* CoreGraphics.framework */,
 				6A09BED71C1F2602009C415C /* QuartzCore.framework */,
-				8B00593E218039C3BAFB678D /* Pods.framework */,
+				0FF1023155D8255F56C90F93 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -403,6 +405,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				6A09BEC01C1D43C1009C415C /* Base */,
+				6A6F8D7C1C9136610012A2C9 /* zh-Hans */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
@@ -411,6 +414,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				6A09BEC31C1D43CC009C415C /* Base */,
+				6A6F8D7D1C9136610012A2C9 /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

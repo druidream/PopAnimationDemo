@@ -66,24 +66,20 @@
 
     [self prefersStatusBarHidden];
     [self performSelector:@selector(setNeedsStatusBarAppearanceUpdate)];
-
-    [self _animateInterface];
+    
+    // register delegate to update progress view
+    [[BackgroundPlayer sharedInstance] setDelegate:self];
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
     
-    // register delegate to update progress view
-    [[BackgroundPlayer sharedInstance] setDelegate:self];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    [self _animateInterface];
 }
 
 #pragma mark - TableView delegates
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return 7;
@@ -134,6 +130,8 @@
     }
 }
 
+#pragma mark - PlayerDelegate
+
 - (void)currentTime:(NSTimeInterval)time withDuration:(NSTimeInterval)duration
 {
     SongTableViewCell *cell;
@@ -152,6 +150,7 @@
 }
 
 #pragma mark - Private
+
 - (void)_animateInterface
 {
     NSArray *visibleCells = self.tableView.visibleCells;
@@ -162,7 +161,7 @@
         dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
         dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
             [cell setHidden:NO];
-            
+             
             POPSpringAnimation *animation = [POPSpringAnimation animation];
             animation.property = [POPAnimatableProperty propertyWithName:kPOPLayerTranslationX];
             animation.fromValue = @(300.0);
@@ -170,7 +169,6 @@
             animation.springBounciness = 15.0;
             animation.springSpeed = 5;
 
-            
             [cell.layer pop_addAnimation:animation forKey:nil];
         });
     }
