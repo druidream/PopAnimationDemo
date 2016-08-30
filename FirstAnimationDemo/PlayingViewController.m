@@ -18,19 +18,15 @@
 
 @interface PlayingViewController ()
 
+@property (nonatomic, strong) CADisplayLink *displaylink;
 
 @end
 
 @implementation PlayingViewController
-@synthesize bgImage,coverImage, titleLabel, artistLabel, elapsedLabel, totalLabel;
+@synthesize coverImage, titleLabel, artistLabel, elapsedLabel, totalLabel;
 @synthesize progressView, loopIcon, backwardIcon, pauseIcon, forwardIcon, randomIcon;
 @synthesize bottomView, playInBarIcon;
 @synthesize waveformView;
-
-- (BOOL)prefersStatusBarHidden
-{
-    return YES;
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -107,15 +103,14 @@
     }
     
     // waveform view
-    CADisplayLink *displaylink = [CADisplayLink displayLinkWithTarget:self selector:@selector(updateMeters)];
-    [displaylink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
+    self.displaylink = [CADisplayLink displayLinkWithTarget:self selector:@selector(updateMeters)];
+    [self.displaylink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
     
     [self.view sendSubviewToBack:self.waveformView];
-    dispatch_async(dispatch_get_global_queue(0, 0), ^(void){
-        [self.waveformView setWaveColor:[UIColor whiteColor]];
-        [self.waveformView setPrimaryWaveLineWidth:2.0f];
-        [self.waveformView setSecondaryWaveLineWidth:0.5];
-    });
+
+    [self.waveformView setWaveColor:[UIColor whiteColor]];
+    [self.waveformView setPrimaryWaveLineWidth:2.0f];
+    [self.waveformView setSecondaryWaveLineWidth:0.5];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -130,13 +125,13 @@
 
     POPSpringAnimation *animation = [POPSpringAnimation animation];
     animation.property = [POPAnimatableProperty propertyWithName:kPOPLayerRotationY];
-    animation.fromValue = @(M_PI/3);
+    animation.fromValue = @(M_PI/4);
     animation.toValue = @0.0;
-    animation.springBounciness = 24.0;
-    animation.springSpeed = 30;
-//    animation.dynamicsFriction = 1;
-//    animation.dynamicsMass = 1;
-//    animation.dynamicsTension = 100;
+//    animation.springBounciness = 24.0;
+//    animation.springSpeed = 30;
+    animation.dynamicsTension = 5000;
+    animation.dynamicsFriction = 120;
+    animation.dynamicsMass = 10;
     [coverImage.layer setAnchorPoint:CGPointMake(0, 0.5)];
     CGPoint positionOld = coverImage.layer.position;
     CGPoint positionNew = CGPointMake(0, 0);
@@ -238,7 +233,6 @@
     [randomIcon.layer pop_addAnimation:animation forKey:nil];
     opacityAnimation.beginTime = CACurrentMediaTime() + a +latencyUnit * 5;
     [randomIcon.layer pop_addAnimation:opacityAnimation forKey:nil];
-    
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -248,10 +242,20 @@
     [[BackgroundPlayer sharedInstance] setDelegate:self];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    
+    // invalidate timer to avoid memory leak
+    [self.displaylink invalidate];
 }
+
+- (BOOL)prefersStatusBarHidden
+{
+    return YES;
+}
+
+#pragma mark - PlayerDelegate
 
 - (void)currentTime:(NSTimeInterval)currentTime withDuration:(NSTimeInterval)duration
 {
@@ -277,6 +281,7 @@
 }
 
 #pragma mark - Private
+
 - (void)updateMeters
 {
     BackgroundPlayer *player = [BackgroundPlayer sharedInstance];
